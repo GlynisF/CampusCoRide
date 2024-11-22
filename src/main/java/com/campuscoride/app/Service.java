@@ -65,23 +65,6 @@ public class Service {
     }
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("/form")
-    public Response getForm() {
-        GenericDao<Student> rideFormDao = new GenericDao<>(Student.class);
-        List<Student> rideForms = rideFormDao.getAll();
-        try {
-            String json = mapper.writeValueAsString(rideForms);
-            logger.info(json);
-            return Response.ok(200).entity(json).header("Cache-Control", "max-age=3600").build();
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
-
-
-    @GET
     @Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_PLAIN})
     @Path("/autocomplete/{input}")
     public Response autocomplete(@PathParam("input") String input) throws JsonProcessingException, JsonMappingException {
