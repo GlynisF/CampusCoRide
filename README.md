@@ -23,6 +23,8 @@ Molly wants to head to the other side of campus but doesn't have transportation.
 ## Team Rules
 
 Check slack as frequently as you can
+
 Try to help as much as you can
+
 Positive attitude!
 
