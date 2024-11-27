@@ -16,5 +16,13 @@ to take. No one should be held back from following their goals due to lacking ac
 Signing up is easy and requires valid EDU credentials. In just a few steps students can start connecting by 
 requesting, offering or exchanging ride services.
 
+## Problem Statement
 
-### Services Provided:
+Molly wants to head to the other side of campus but doesn't have transportation. Campus Co-Ride connects her with other students after filling out if they are a Rider or a Driver, date, time, and location. Once they connect with a Driver or a Rider, the will be on their way!
+
+## Team Rules
+
+Check slack as frequently as you can
+Try to help as much as you can
+Positive attitude!
+
