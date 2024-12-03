@@ -73,6 +73,11 @@ Molly is familiar with Javascript, JSON and deploying webservers. She helped set
 
 #### Glynis Fisher
 
+Glynis is a full-stack developer capable of building fully functional web applications from backend to frontend.
+Her skills span both server-side and client-side development, including creating servlets and business logic classes, 
+managing data storage and retrieval through databases, and presenting data to users through web design. She helped with 
+several aspects of the project-- creating the repo, beans, test-classes, and helped implement the REST porition of the project.
+
 #### Michael Meade
 
 #### Enrique Ferreira

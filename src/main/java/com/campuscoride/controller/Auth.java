@@ -30,7 +30,6 @@ public class Auth extends HttpServlet {
 
     }
 
-
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, NumberFormatException {
         if (req.getRequestURI().endsWith("/signup")) {
