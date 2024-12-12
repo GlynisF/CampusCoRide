@@ -13,10 +13,20 @@ import java.util.List;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * The type Student dao test.
+ */
 class StudentDaoTest {
     private final Logger logger = LogManager.getLogger(this.getClass());
+    /**
+     * The Student dao.
+     */
     GenericDao<Student> studentDao;
 
+    /**
+     * Sets up.
+     */
     @BeforeEach
     void setUp() {
         studentDao = new GenericDao<>(Student.class);
@@ -25,6 +35,9 @@ class StudentDaoTest {
         logger.info(db);
     }
 
+    /**
+     * Gets all students.
+     */
     @Test
     void getAllStudents() {
         List<Student> students = studentDao.getAll();
@@ -58,6 +71,9 @@ class StudentDaoTest {
         assertTrue(retrievedStudent.getFirstName().equals("Mary"));
     }
 
+    /**
+     * Update student success.
+     */
     @Test
     void updateStudentSuccess() {
         Student student = studentDao.getById(3);

@@ -16,6 +16,9 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Objects;
 
+/**
+ * The type Ride form.
+ */
 @Entity (name = "RideForm")
 @Table (name = "ride_form")
 public class RideForm implements Serializable {
@@ -63,9 +66,22 @@ public class RideForm implements Serializable {
     @JsonManagedReference
     private Location location;
 
+    /**
+     * Instantiates a new Ride form.
+     */
     public RideForm() {
     }
 
+    /**
+     * Instantiates a new Ride form.
+     *
+     * @param requestType the request type
+     * @param roleType    the role type
+     * @param date        the date
+     * @param time        the time
+     * @param notes       the notes
+     * @param student     the student
+     */
     public RideForm(String requestType, String roleType, LocalDate date, LocalTime time, String notes, Student student) {
         this.requestType = requestType;
         this.roleType = roleType;
@@ -75,6 +91,17 @@ public class RideForm implements Serializable {
         this.student = student;
     }
 
+    /**
+     * Instantiates a new Ride form.
+     *
+     * @param roleType    the role type
+     * @param requestType the request type
+     * @param date        the date
+     * @param time        the time
+     * @param notes       the notes
+     * @param student     the student
+     * @param location    the location
+     */
     public RideForm(String roleType, String requestType, LocalDate date, LocalTime time, String notes, Student student, Location location) {
         this.requestType = requestType;
         this.roleType = roleType;
@@ -85,62 +112,137 @@ public class RideForm implements Serializable {
         this.location = location;
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * Gets request type.
+     *
+     * @return the request type
+     */
     public String getRequestType() {
         return requestType;
     }
 
+    /**
+     * Sets request type.
+     *
+     * @param requestType the request type
+     */
     public void setRequestType(String requestType) {
         this.requestType = requestType;
     }
 
+    /**
+     * Gets role type.
+     *
+     * @return the role type
+     */
     public String getRoleType() {
         return roleType;
     }
 
+    /**
+     * Sets role type.
+     *
+     * @param roleType the role type
+     */
     public void setRoleType(String roleType) {
         this.roleType = roleType;
     }
 
+    /**
+     * Gets date.
+     *
+     * @return the date
+     */
     public LocalDate getDate() {
         return date;
     }
 
+    /**
+     * Sets date.
+     *
+     * @param date the date
+     */
     public void setDate(LocalDate date) {
         this.date = date;
     }
 
+    /**
+     * Gets notes.
+     *
+     * @return the notes
+     */
     public String getNotes() {
         return notes;
     }
 
+    /**
+     * Sets notes.
+     *
+     * @param notes the notes
+     */
     public void setNotes(String notes) {
         this.notes = notes;
     }
 
+    /**
+     * Gets time.
+     *
+     * @return the time
+     */
     public LocalTime getTime() {
         return time;
     }
 
+    /**
+     * Sets time.
+     *
+     * @param time the time
+     */
     public void setTime(LocalTime time) {
         this.time = time;
     }
 
+    /**
+     * Gets student.
+     *
+     * @return the student
+     */
     public Student getStudent() {
         return student;
     }
 
+    /**
+     * Sets student.
+     *
+     * @param student the student
+     */
     public void setStudent(Student student) {
         this.student = student;
     }
 
+    /**
+     * Gets location.
+     *
+     * @return the location
+     */
     public Location getLocation() {
         return location;
     }

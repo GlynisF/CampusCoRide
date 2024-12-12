@@ -6,21 +6,24 @@ Java Enterprise Team Project | Madison College • Fall Semester 2024
 
 ## Problem Statement
 
-Transportation accessibility is a key factor in student success. For prospective and current students, reliable transportation can be a deciding factor in pursuing educational goals. The Campus Co-Ride API helps ensure that lack of transportation is not a barrier to achieving these aspirations. Using this API, developers can enable users with valid EDU credentials to sign up and connect with the platform. This service provides a way to store rider, driver, and location data in a single place.
+Transportation accessibility is a key factor in student success. For prospective and current students, reliable<br>
+transportation can be a deciding factor in pursuing educational goals. The Campus Co-Ride API helps ensure lack of<br>
+transportation is not a barrier to achieving these aspirations. Using this API, any university or technical school in<br>
+Wisconsin can implement this service to connect students in their area. This service provides a way to store rider, driver,<br>
+and location data in a single place.<br><br>
 
 This service provides the following:
 
-* Get a student and their ride forms in plain text and JSON, given a student ID.
-* Get all students and their ride forms in plain text and JSON.
+* Get all students in JSON.
+* Get a student by first and last name.
+* Update a student, given a student ID in JSON.
+* Get a student given an ID in JSON.
+* Post a new student in JSON.
 * Get all ride forms in plain text and JSON.
-* Get a ride form in plain text and JSON, given a ride form ID.
-* Add a student.
-* Add a ride form for a student, given a student ID.
-* Add a student and one or more ride forms for that student.
-* Update a student, given a student ID.
-* Update a ride form, given a ride form ID.
-* Delete a student and their associated ride forms, given a student ID.
-* Delete a ride form, given a ride form ID
+* Get all ride forms by a given date.
+* Get all ride forms by request type (To campus or From campus) in JSON.
+* Delete a ride form given an ID with a JSON response.
+
 
 ## Resources
 

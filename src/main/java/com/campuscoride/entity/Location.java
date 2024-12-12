@@ -9,6 +9,9 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
+/**
+ * The type Location.
+ */
 @Entity (name = "Location")
 @Table (name = "location")
 public class Location implements Serializable {
@@ -35,52 +38,112 @@ public class Location implements Serializable {
     @JsonBackReference
     private RideForm rideForm;
 
+    /**
+     * Instantiates a new Location.
+     */
     public Location() {
     }
 
+    /**
+     * Instantiates a new Location.
+     *
+     * @param locationName the location name
+     * @param lat          the lat
+     * @param lng          the lng
+     */
     public Location(String locationName, BigDecimal lat, BigDecimal lng) {
         this.locationName = locationName;
         this.lat = lat;
         this.lng = lng;
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
     public void setId(Integer id) {
         this.id = id;
     }
 
+    /**
+     * Gets location name.
+     *
+     * @return the location name
+     */
     public String getLocationName() {
         return locationName;
     }
 
+    /**
+     * Sets location name.
+     *
+     * @param locationName the location name
+     */
     public void setLocationName(String locationName) {
         this.locationName = locationName;
     }
 
+    /**
+     * Gets lat.
+     *
+     * @return the lat
+     */
     public BigDecimal getLat() {
         return lat;
     }
 
+    /**
+     * Sets lat.
+     *
+     * @param lat the lat
+     */
     public void setLat(BigDecimal lat) {
         this.lat = lat;
     }
 
+    /**
+     * Gets lng.
+     *
+     * @return the lng
+     */
     public BigDecimal getLng() {
         return lng;
     }
 
+    /**
+     * Sets lng.
+     *
+     * @param lng the lng
+     */
     public void setLng(BigDecimal lng) {
         this.lng = lng;
     }
 
 
+    /**
+     * Gets ride form.
+     *
+     * @return the ride form
+     */
     public RideForm getRideForm() {
         return rideForm;
     }
 
+    /**
+     * Sets ride form.
+     *
+     * @param rideForm the ride form
+     */
     public void setRideForm(RideForm rideForm) {
         this.rideForm = rideForm;
     }

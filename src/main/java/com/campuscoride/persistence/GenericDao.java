@@ -14,12 +14,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The type Generic dao.
+ *
+ * @param <T> the type parameter
+ */
 public class GenericDao<T> {
 
     private Class<T> type;
     private final Logger logger = LogManager.getLogger(this.getClass());
+    /**
+     * The Session factory.
+     */
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
+    /**
+     * Instantiates a new Generic dao.
+     */
     public GenericDao() {
     }
 
@@ -50,8 +61,9 @@ public class GenericDao<T> {
 
     /**
      * Gets an entity by id
+     *
      * @param id entity id to search by
-     * @return entity
+     * @return entity by id
      */
     public T getById(int id) {
         Session session = getSession();
@@ -77,7 +89,9 @@ public class GenericDao<T> {
     /**
      * Inserts the entity.
      *
+     * @param <T>    the type parameter
      * @param entity entity to be inserted
+     * @return the t
      */
     public <T> T insert(T entity) {
         int id = 0;
@@ -107,8 +121,9 @@ public class GenericDao<T> {
     /**
      * Finds entities by one of its properties.
      * sample usage: findByPropertyEqual("lastname", "Curry")
+     *
      * @param propertyName the property name.
-     * @param value the value by which to find.
+     * @param value        the value by which to find.
      * @return the list of all entities found matching the criteria
      */
     public List<T> findByPropertyEqual(String propertyName, Object value) {
@@ -125,11 +140,9 @@ public class GenericDao<T> {
     /**
      * Finds entities by multiple properties.
      * Inspired by https://stackoverflow.com/questions/11138118/really-dynamic-jpa-criteriabuilder
-
+     *
      * @param propertyMap property and value pairs
      * @return entities with properties equal to those passed in the map
-     *
-     *
      */
     public List<T> findByPropertyMapEqual(Map<String, Object> propertyMap) {
         Session session = getSession();
@@ -145,7 +158,6 @@ public class GenericDao<T> {
         session.close();
         return items;
     }
-
 
     /**
      * Returns an open session from the SessionFactory

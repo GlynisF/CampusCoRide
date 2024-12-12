@@ -16,6 +16,9 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
+/**
+ * The type Ride form dao test.
+ */
 class RideFormDaoTest {
     private final Logger logger = LogManager.getLogger(this.getClass());
 
@@ -28,6 +31,9 @@ class RideFormDaoTest {
      */
     GenericDao<RideForm> rideFormDao;
 
+    /**
+     * Sets up.
+     */
     @BeforeEach
     void setUp() {
         studentDao = new GenericDao<>(Student.class);
@@ -37,6 +43,9 @@ class RideFormDaoTest {
         logger.info(db.toString());
     }
 
+    /**
+     * Gets all ride forms success.
+     */
     @Test
     void getAllRideFormsSuccess() {
         List<RideForm> rideForms = rideFormDao.getAll();
